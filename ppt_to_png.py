@@ -11,7 +11,7 @@ def ppt_to_pdf_png(input_ppt, output_pdf):
         os.makedirs(foldername)
     # 啟動 PowerPoint 應用程式
     powerpoint = comtypes.client.CreateObject("PowerPoint.Application")
-    powerpoint.Visible = 2  # 設為 1 代表 PowerPoint 以可見模式運行（0 為不可見）
+    powerpoint.Visible = 2  # 設為 1 代表 PowerPoint 以可見模式運行, 0 為不可見, 2為最小化
 
     # 打開 PPT 檔案
     presentation = powerpoint.Presentations.Open(os.path.abspath(input_ppt))
